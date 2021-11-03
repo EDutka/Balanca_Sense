@@ -59,22 +59,20 @@ if __name__ == "__main__":
     for i in range(1,4):
         
         #Baixa o arquivo
-        # Não estão funcionando a baixa de arquivos pelos links, apena pelo site.
-        # Está dando erro de certificado inválido, outros sites funcionam
-
+        
         if i == 1:
             print('Baixando arquivo de Exportação')
             nome_arquivo = os.path.join(OUTPUT_DIR, ARQ_EXP)
-            #baixar_arquivo(BASE_EXP, nome_arquivo)
+            baixar_arquivo(BASE_EXP, nome_arquivo)
         elif i == 2:
             print('Baixando arquivo de Importação')
             nome_arquivo = os.path.join(OUTPUT_DIR, ARQ_IMP)
-            #baixar_arquivo(BASE_IMP, nome_arquivo)
+            baixar_arquivo(BASE_IMP, nome_arquivo)
         else:
             print('Baixando arquivo de Cadastros Auxiliares') 
             nome_arquivo = os.path.join(OUTPUT_DIR, ARQ_AUX)
-            #baixar_arquivo(TAB_AUX, nome_arquivo)
+            baixar_arquivo(TAB_AUX, nome_arquivo)
 
     #Descompacta os zip
-    #descompactaArquivo('D:\\OneDrive\\Documentos\TesteUnimed\\Arquivos\\IMP_COMPLETA.zip')
-    #descompactaArquivo('D:\\OneDrive\\Documentos\TesteUnimed\\Arquivos\\EXP_COMPLETA.zip')
+    descompactaArquivo('D:\\OneDrive\\Documentos\TesteUnimed\\Arquivos\\IMP_COMPLETA.zip')
+    descompactaArquivo('D:\\OneDrive\\Documentos\TesteUnimed\\Arquivos\\EXP_COMPLETA.zip')
